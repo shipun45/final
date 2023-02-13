@@ -2,24 +2,30 @@ const mongoose = require("mongoose");
 const ratingSchema = require("./rating");
 
 const productSchema = mongoose.Schema({
-  name: {
+ 
+  title: {
     type: String,
-    required: true,
-    trim: true,
+    // required: true,
   },
-  description: {
+
+  img1: {
     type: String,
-    required: true,
-    trim: true,
+    // required: true,
   },
-  images: [
-    {
-      type: String,
-      // required: true,
-    },
-  ],
-  quantity: {
-    type: Number,
+  img2: {
+    type: String,
+    // required: true,
+  },
+  img3: {
+    type: String,
+    // required: true,
+  },
+  img4: {
+    type: String,
+    // required: true,
+  },
+  img5: {
+    type: String,
     // required: true,
   },
   price: {
@@ -30,7 +36,6 @@ const productSchema = mongoose.Schema({
     type: String,
     // required: true,
   },
-  ratings: [ratingSchema],
 });
 
 const Product = mongoose.model("Product", productSchema);
