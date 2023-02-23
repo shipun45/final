@@ -4,9 +4,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const adminRouter = require("./routes/admin");
 // IMPORTS FROM OTHER FILES
-// const authRouter = require("./routes/auth");
+const authRouter = require("./routes/auth");
 const productRouter = require("./routes/product");
 const jioRouter = require("./routes/jio");
+const userRouter = require("./routes/user");
 
 // INIT
 const PORT = process.env.PORT || 3000;
@@ -22,7 +23,7 @@ app.use(cors());
 app.use(adminRouter);
 app.use(productRouter);
 app.use(jioRouter);
-// app.use(userRouter);
+app.use(userRouter);
 
 // Connections
 mongoose
